@@ -1,0 +1,50 @@
+<mat-sidenav-container class="navbar-sidenav-container">
+
+    <mat-sidenav #snav fixedTopGap class="sidenav" mode="side" opened>
+      <mat-nav-list>
+  
+          <h3 mat-subheader class="subheader">
+            <mat-icon>home</mat-icon>
+            Home
+          </h3>
+  
+        <a mat-list-item routerLink="/dashboard" routerLinkActive="active">
+          <div class="nav-item">
+            <mat-icon mat-list-icon>dashboard</mat-icon>
+            <p mat-line>Dashboard</p>
+          </div>
+        </a>
+  
+        <a mat-list-item routerLink="/customers" routerLinkActive="active">
+          <div class="nav-item">
+            <mat-icon mat-list-icon>business</mat-icon>
+            <p mat-line>Customers</p>
+          </div>
+        </a>
+  
+        <a mat-list-item routerLink="/users" routerLinkActive="active">
+          <div class="nav-item"><!--pour faire l allignement-->
+            <mat-icon mat-list-icon>people</mat-icon>
+            <p mat-line>Users</p>
+          </div>
+        </a>
+  
+        <a mat-list-item routerLink="/account" routerLinkActive="active">
+          <div class="nav-item">
+            <mat-icon mat-list-icon>person</mat-icon>
+            <p mat-line>Account</p>
+          </div>
+        </a>
+  
+        <a mat-list-item routerLink="/logout" routerLinkActive="active">
+          <div class="nav-item">
+            <mat-icon mat-list-icon>exit_to_app</mat-icon>
+            <p mat-line>Log out</p>
+          </div>
+        </a>
+  
+      </mat-nav-list>
+  
+    </mat-sidenav>
+  </mat-sidenav-container>
+  

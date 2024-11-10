@@ -1,0 +1,25 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row class="navbar__style">
+    <div class="left__navbar">
+      <mat-icon mat-icon-button>
+        <i class="material-icons">menu</i>
+      </mat-icon>
+      &nbsp;
+      <span>Gestion Foyer</span>
+    </div>
+    <div class="right__navbar">
+      <div class="demo-section">
+        <button mat-icon-button>
+          <mat-icon matBadge="2" matBadgeColor="accent">notifications</mat-icon>
+        </button>
+      </div>
+      <div>
+        <button mat-button [matMenuTriggerFor]="menu" style="margin-top: 6px;"><mat-icon>person</mat-icon>Ayette </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item><mat-icon>person</mat-icon>Account</button>
+          <button mat-menu-item><mat-icon>exit_to_app</mat-icon>Logout</button>
+        </mat-menu>
+      </div>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
