@@ -12,6 +12,7 @@ import { ProfileDetailsComponent } from './profile-details/profile-details.compo
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatIconModule } from '@angular/material/icon';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [AccountPageComponent,ProfileDetailsComponent,ChangePasswordComponent],
@@ -25,7 +26,8 @@ import { MatIconModule } from '@angular/material/icon';
     FormsModule,
     ReactiveFormsModule,
     MatTabsModule,
-    MatIconModule 
+    MatIconModule,
+    RouterModule 
 
   ],
   exports: [

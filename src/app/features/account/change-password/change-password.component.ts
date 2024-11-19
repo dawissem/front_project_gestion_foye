@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-change-password',
@@ -10,7 +11,13 @@ export class ChangePasswordComponent {
   hideNewPassword: boolean = true; 
   hideConfirmPassword: boolean = true; 
 
+  constructor(private router: Router){}
+
   changePassword() {
     // Logic for changing the password
+  }
+
+  goToChangePassword() {
+    this.router.navigate(['/password'])
   }
 }
