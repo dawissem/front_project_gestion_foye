@@ -7,3 +7,11 @@
     background-size: cover;
   }
   
+  
+.pink-text {
+  color: #d5006d; /* Change to your desired pink color */
+}
+
+.mat-mdc-button-ripple {
+  background-color: red;
+}
