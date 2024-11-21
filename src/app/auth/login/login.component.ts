@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,9 +13,15 @@ import {MatCardModule} from '@angular/material/card';
 })
 export class LoginComponent {
   password :boolean =true; 
+  constructor(private router:Router){}
 hide() {
      this.password=!this.password;
     return !this.password;
+}
+
+navigateToHome(event: Event) {
+  event.preventDefault();
+  this.router.navigate(['/home']);
 }
 
 clickEvent($event: MouseEvent) {

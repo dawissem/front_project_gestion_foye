@@ -35,7 +35,7 @@
                         <!-- <button mat-button>LIKE</button>
                         <button mat-button>SHARE</button> -->
                         <button class="link__button" mat-button>Forgot Password</button>
-                        <button mat-raised-button class="login__button" >login</button>
+                        <button mat-raised-button class="login__button" (click)="navigateToHome($event)">Login</button>
                         <div class="card__actions-footer">                            
                             <span>Don't have an account</span>
                             <a mat-button routerLink="/auth/signup">Create an account</a>

@@ -12,6 +12,9 @@ import {MatListModule} from '@angular/material/list';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatInputModule} from '@angular/material/input';
+import { RouterModule } from '@angular/router';
+import { MatSelectModule } from '@angular/material/select';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     NavbarComponent,
@@ -28,7 +31,10 @@ import {MatInputModule} from '@angular/material/input';
     MatListModule,
     MatFormFieldModule,
     MatCheckboxModule,
-    MatInputModule
+    MatInputModule,
+    RouterModule, 
+    MatSelectModule,
+    FormsModule
   ],
   exports: [
     NavbarComponent,

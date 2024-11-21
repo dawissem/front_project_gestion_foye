@@ -34,6 +34,9 @@ import { MatSelectModule } from '@angular/material/select';
     MatCheckboxModule,
     MatSnackBarModule,
     MatSelectModule
+  ],
+  exports:[
+    LoginComponent
   ]
 })
 export class AuthModule { }
