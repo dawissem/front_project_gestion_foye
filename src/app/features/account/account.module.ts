@@ -13,9 +13,10 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
+import { ProfileFormComponent } from './profile-form/profile-form.component';
 
 @NgModule({
-  declarations: [AccountPageComponent,ProfileDetailsComponent,ChangePasswordComponent],
+  declarations: [AccountPageComponent,ProfileDetailsComponent,ChangePasswordComponent, ProfileFormComponent],
   imports: [
     CommonModule,
     AccountRoutingModule,

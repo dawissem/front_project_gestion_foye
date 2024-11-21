@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-change-password',
-  templateUrl: './change-password.component.html',
-  styleUrls: ['./change-password.component.css']
+  selector: 'app-profile-form',
+  templateUrl: './profile-form.component.html',
+  styleUrls: ['./profile-form.component.css']
 })
-export class ChangePasswordComponent {
+export class ProfileFormComponent {
   hideCurrentPassword: boolean = true; 
   hideNewPassword: boolean = true; 
   hideConfirmPassword: boolean = true; 
@@ -17,7 +17,7 @@ export class ChangePasswordComponent {
     // Logic for changing the password
   }
 
-  goToEditProfile(event:Event) {
-    this.router.navigate(['home/account'])
+  goToChangePassword(event:Event) {
+    this.router.navigate(['home/account/password'])
   }
 }
