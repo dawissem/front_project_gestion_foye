@@ -10,7 +10,10 @@ export class ChangePasswordComponent {
   hideCurrentPassword: boolean = true; 
   hideNewPassword: boolean = true; 
   hideConfirmPassword: boolean = true; 
-
+  isDisabled:boolean = true;
+  currentPassword?:string; 
+  newPassword?:string;
+  
   constructor(private router: Router){}
 
   changePassword() {

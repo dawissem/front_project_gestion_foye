@@ -14,7 +14,7 @@
             <p mat-line>Dashboard</p>
           </div>
         </a>
-  
+
         <a mat-list-item routerLink="/customers" routerLinkActive="active">
           <div class="nav-item">
             <mat-icon mat-list-icon>business</mat-icon>
@@ -42,7 +42,23 @@
             <p mat-line>Log out</p>
           </div>
         </a>
-  
+        <h4>Basic mat-select</h4>
+        <mat-form-field>
+          <mat-label>Favorite food</mat-label>
+          <mat-select>           
+          </mat-select>
+        </mat-form-field>
+        
+        <h4>Basic native select</h4>
+        <mat-form-field>
+          <mat-label>Cars</mat-label>
+          <select matNativeControl required>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+          </select>
+        </mat-form-field>
       </mat-nav-list>
   
     </mat-sidenav>
