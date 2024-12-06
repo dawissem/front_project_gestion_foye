@@ -16,6 +16,13 @@ const routes: Routes = [
           ),
       },
       {
+        path: 'users',
+        loadChildren: () =>
+          import('./../features/users/users.module').then(
+            (m) => m.UsersModule
+          ),
+      },
+      {
         path: 'awatef',
         component: DashboardAdminComponent, // Use the component directly
       },
