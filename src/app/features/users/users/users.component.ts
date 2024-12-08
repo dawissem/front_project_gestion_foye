@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { AddDialogComponent } from '../dialogs/add-dialog/add-dialog.component';
 
 @Component({
   selector: 'app-users',
@@ -6,6 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent {
+
+  // constructor(
+  //   public dialog: MatDialog,
+  //  ) {}
   deleteItem(_t96: any,arg1: any,arg2: any,arg3: any,arg4: any) {
   throw new Error('Method not implemented.');
   }
@@ -13,7 +19,10 @@ export class UsersComponent {
   throw new Error('Method not implemented.');
   }
   addNew() {
-  throw new Error('Method not implemented.');
+    // const dialogRef = this.dialog.open(AddDialogComponent, {
+     
+    // });
+
   }
 
 
@@ -21,7 +30,15 @@ export class UsersComponent {
   dataSource = [
     {
       id: 1,
-      title: 'Sample Title 1',
+      title: 'amira laabidi',
+      state: 'Active',
+      url: 'https://example.com/1',
+      created_at: '2024-01-01',
+      updated_at: '2024-01-02',
+    },
+    {
+      id: 1,
+      title: 'ayette ayette',
       state: 'Active',
       url: 'https://example.com/1',
       created_at: '2024-01-01',
@@ -29,7 +46,7 @@ export class UsersComponent {
     },
     {
       id: 2,
-      title: 'Sample Title 2',
+      title: 'fhemtek hasnaoui formateur',
       state: 'Inactive',
       url: 'https://example.com/2',
       created_at: '2024-02-01',
@@ -37,7 +54,7 @@ export class UsersComponent {
     },
     {
       id: 3,
-      title: 'Sample Title 3',
+      title: 'hend hasnaoui',
       state: 'Active',
       url: 'https://example.com/3',
       created_at: '2024-03-01',
@@ -45,7 +62,7 @@ export class UsersComponent {
     },
     {
       id: 4,
-      title: 'Sample Title 4',
+      title: 'awatef jemaa',
       state: 'Pending',
       url: 'https://example.com/4',
       created_at: '2024-04-01',
@@ -53,7 +70,15 @@ export class UsersComponent {
     },
     {
       id: 5,
-      title: 'Sample Title 5',
+      title: 'wassim mannai',
+      state: 'Active',
+      url: 'https://example.com/5',
+      created_at: '2024-05-01',
+      updated_at: '2024-05-02',
+    },
+    {
+      id: 5,
+      title: 'maroua touhemi',
       state: 'Active',
       url: 'https://example.com/5',
       created_at: '2024-05-01',
