@@ -23,6 +23,13 @@ const routes: Routes = [
           ),
       },
       {
+        path: 'dashboard',
+        loadChildren: () =>
+          import('./../dashboard/dashboard.module').then(
+            (m) => m.DashboardModule
+          ),
+      },
+      {
         path: 'awatef',
         component: DashboardAdminComponent, // Use the component directly
       },
