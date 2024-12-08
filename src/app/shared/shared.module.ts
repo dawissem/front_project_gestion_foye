@@ -15,11 +15,13 @@ import {MatInputModule} from '@angular/material/input';
 import { RouterModule } from '@angular/router';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
+import { AddDialogComponent } from './dialogs/add-dialog/add-dialog.component';
 @NgModule({
   declarations: [
     NavbarComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    AddDialogComponent
   ],
   imports: [
     CommonModule,
@@ -39,6 +41,7 @@ import { FormsModule } from '@angular/forms';
   exports: [
     NavbarComponent,
     SidebarComponent,
+    AddDialogComponent,
   ]
 })
 export class SharedModule { }
