@@ -11,6 +11,10 @@ export class DashboardAdminComponent {
 
   constructor(public dialog: MatDialog){}
 
+
+  myName:string = "wael"
+
+
   deleteItem(_t96: any,arg1: any,arg2: any,arg3: any,arg4: any) {
     throw new Error('Method not implemented.');
     }
