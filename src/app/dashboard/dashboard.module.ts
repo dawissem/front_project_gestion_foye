@@ -18,16 +18,17 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { NewDashboardComponent } from './new-dashboard/new-dashboard.component';
 import { TransactionCardComponent } from './transaction-card/transaction-card.component';
 import { UniversitiesCardComponent } from './universities-card/universities-card.component';
+import { OverviewCardComponent } from './overview-card/overview-card.component';
 
 
 @NgModule({
   declarations: [
-
     DashboardAdminComponent,
     DashboardStudentComponent,
     NewDashboardComponent,
     TransactionCardComponent,
-    UniversitiesCardComponent
+    UniversitiesCardComponent,
+    OverviewCardComponent
   ],
   imports: [
     CommonModule,    
@@ -41,7 +42,8 @@ import { UniversitiesCardComponent } from './universities-card/universities-card
    MatToolbarModule,
    MatPaginatorModule,
    ReactiveFormsModule,
-   MatDialogModule
+   MatDialogModule,
+  //  SlickCarouselModule
    
   ],
   exports: [

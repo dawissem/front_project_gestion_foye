@@ -23,6 +23,13 @@ const routes: Routes = [
           ),
       },
       {
+        path: 'reservation',
+        loadChildren: () =>
+          import('./../features/reservations/reservations.module').then(
+            (m) => m.ReservationsModule
+          ),
+      },
+      {
         path: 'dashboard',
         loadChildren: () =>
           import('./../dashboard/dashboard.module').then(

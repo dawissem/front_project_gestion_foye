@@ -1,6 +1,7 @@
 <div>
     <div>
         <h2 style="margin-bottom: 0px;">Home</h2>
+        <app-overview-card></app-overview-card>
         <p>Foyer details overview and analytics</p>
     </div>
     <div class="card__components">
@@ -14,14 +15,22 @@
             <button class="add__student__card-button">add student</button>
         </div>
 
-        <div class="add__student__card">
-            <h1 class="add__student__card-title">
-                Let's Add new Student to our beautiful dorm !
-            </h1>
-            <h3 class="add__student__card-subtitle">
-                click this button to add 
-            </h3>
-            <button class="add__student__card-button">add student</button>
+        <div class="add__reservation__card">
+            <p style="text-align: center; color: #F7C041; font-weight: 500;padding-bottom: 24px;">Quick Access</p>
+            <div class="add__reservation__card-style" >
+                <div class="top__search__icon">                   
+                    <span class="material-icons">rocket</span>
+                </div>
+               
+                <h1 class="add__reservation__card-title">
+                    Let's Add new Reservation !
+                </h1>
+                <h3 class="add__reservation__card-subtitle">
+                    click this button to add new Reservation
+                </h3>
+                <button class="add__reservation__card-button">Add Reservation</button>
+            </div>
+            
         </div>
 
         <div class="search__student__card">
@@ -55,7 +64,7 @@
     <div class="bottom__containers" >
         <div class="bottom__card">
             <div class="bottom__card-header">
-                <p style="font-weight: 500;">Last Subscription</p>
+                <p style="font-weight: 500;">Last Reservations</p>
                 <p style="color: #194AD3; font-weight: 500;">See details</p>            
             </div>
             <app-transaction-card></app-transaction-card>
