@@ -48,7 +48,8 @@ import { OverviewCardComponent } from './overview-card/overview-card.component';
   ],
   exports: [
     DashboardStudentComponent,
-    DashboardAdminComponent
+    DashboardAdminComponent,
+    UniversitiesCardComponent
   ]
 })
 export class DashboardModule { }

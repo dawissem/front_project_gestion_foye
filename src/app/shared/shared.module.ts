@@ -16,12 +16,14 @@ import { RouterModule } from '@angular/router';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import { AddDialogComponent } from './dialogs/add-dialog/add-dialog.component';
+import { ReservationDialogComponent } from './dialogs/reservation-dialog/reservation-dialog.component';
 @NgModule({
   declarations: [
     NavbarComponent,
     FooterComponent,
     SidebarComponent,
-    AddDialogComponent
+    AddDialogComponent,
+    ReservationDialogComponent
   ],
   imports: [
     CommonModule,

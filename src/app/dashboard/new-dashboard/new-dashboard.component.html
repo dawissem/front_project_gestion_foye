@@ -12,7 +12,7 @@
             <h3 class="add__student__card-subtitle">
                 click this button to add 
             </h3>
-            <button class="add__student__card-button">add student</button>
+            <button (click)="addNewStudent()" class="add__student__card-button">add student</button>
         </div>
 
         <div class="add__reservation__card">
@@ -28,7 +28,7 @@
                 <h3 class="add__reservation__card-subtitle">
                     click this button to add new Reservation
                 </h3>
-                <button class="add__reservation__card-button">Add Reservation</button>
+                <button class="add__reservation__card-button" (click)="addNewReservation()">Add Reservation</button>
             </div>
             
         </div>
@@ -65,7 +65,7 @@
         <div class="bottom__card">
             <div class="bottom__card-header">
                 <p style="font-weight: 500;">Last Reservations</p>
-                <p style="color: #194AD3; font-weight: 500;">See details</p>            
+                <p style="color: #194AD3; font-weight: 500;"><a routerLink="/home/reservation">See details</a></p>            
             </div>
             <app-transaction-card></app-transaction-card>
         </div>
@@ -73,7 +73,7 @@
         <div class="bottom__card">
             <div class="bottom__card-header">
                 <p style="font-weight: 500;" >Universities</p>
-                <p style="color: #194AD3; font-weight: 500;">See All Universities</p>            
+                <p style="color: #194AD3; font-weight: 500;"><a routerLink="/home/universities">See All Universities</a></p>            
             </div>
             <app-universities-card></app-universities-card>
         </div>

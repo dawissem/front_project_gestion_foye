@@ -35,6 +35,7 @@
   width: 50%;
   height: 28px;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .search__student__card {

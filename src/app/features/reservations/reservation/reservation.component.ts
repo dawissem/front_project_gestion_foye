@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./reservation.component.css']
 })
 export class ReservationComponent {
+  
 
   tabs: string[] = ['All', 'Approved', 'Pending','Declined'];
   activeTab: string = 'All';
@@ -45,4 +46,8 @@ export class ReservationComponent {
       return matchesSearch && matchesCategory;
     });
   }
+
+  // addNewReservation() {
+  //   const dialogRef = this.dialog.open(ReservationDialogComponent, {});
+  // }
 }

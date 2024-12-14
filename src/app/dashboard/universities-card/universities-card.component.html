@@ -10,6 +10,16 @@
           <img *ngFor="let icon of influencer.socialIcons" [src]="icon" class="icon" />
         </div>
       </div>
-      <button class="add-button">Edit University</button>
+     <div style="display: flex;" *ngIf="canEdit"> 
+      <button mat-icon-button color="accent" (click)="startEdit()">
+      <mat-icon aria-label="Edit">edit</mat-icon>
+    </button>
+
+    <button mat-icon-button color="accent" (click)="startEdit()">
+      <mat-icon aria-label="Delete">delete</mat-icon>
+    </button></div>
+   
+       
+     
     </div>
   </div>

@@ -7,18 +7,10 @@
           </div>
             <!-- Search and Category -->
     <div class="actions">
-        <input
-          type="text"
-          placeholder="Search"
-          [(ngModel)]="searchQuery"
-          (input)="filterReservations()"
-        />
-        <select [(ngModel)]="selectedCategory" (change)="filterReservations()">
-          <option value="All">Category: All</option>
-          <option *ngFor="let category of categories" [value]="category">
-            {{ category }}
-          </option>
-        </select>
+       
+        
+     
+        <button class="add__reservation__card-button" style="width: 100%;">Add Reservation</button>
       </div>
      </div>
     
@@ -32,10 +24,16 @@
         {{ tab }}
       </button>
     </div>
-  
+    <div class="search-container">
+      <div class="search-container-input">
+          <mat-icon matPrefix>search</mat-icon>
+          <input style="border: none;" matInput type="text" placeholder="Search" />
+      </div>
+      
+ 
+    </div>
 
   
-    <!-- Reservations List -->
     <div class="reservations-list">
       <div
         *ngFor="let reservation of filteredReservations"
@@ -53,7 +51,8 @@
           <span>{{ reservation.time }}</span>
         </div>
         <div *ngIf="reservation.hasActions" class="actions">
-          <button class="decline">Decline</button>
+          <button class="decline">Delete</button>
+          <button class="decline" style="background-color: rgb(108, 108, 52);">Decline</button>
           <button class="accept">Accept</button>
         </div>
       </div>
