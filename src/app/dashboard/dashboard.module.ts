@@ -19,6 +19,7 @@ import { NewDashboardComponent } from './new-dashboard/new-dashboard.component';
 import { TransactionCardComponent } from './transaction-card/transaction-card.component';
 import { UniversitiesCardComponent } from './universities-card/universities-card.component';
 import { OverviewCardComponent } from './overview-card/overview-card.component';
+import { MatCardModule } from '@angular/material/card';
 
 
 @NgModule({
@@ -43,6 +44,7 @@ import { OverviewCardComponent } from './overview-card/overview-card.component';
    MatPaginatorModule,
    ReactiveFormsModule,
    MatDialogModule,
+   MatCardModule
   //  SlickCarouselModule
    
   ],

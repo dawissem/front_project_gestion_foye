@@ -1,8 +1,8 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, Input } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
-interface Student {
+interface DialogParm {
   id: number;
   title: string;
   state: string;
@@ -13,6 +13,7 @@ interface Student {
   class:string;
   enrollmentDate:string;
   name:string;
+
 }
 
 @Component({
@@ -22,8 +23,10 @@ interface Student {
 })
 export class AddDialogComponent {
 
+
+
   constructor(public dialogRef: MatDialogRef<AddDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: Student,
+    @Inject(MAT_DIALOG_DATA) public data: DialogParm,
     // public dataService: DataService
   ) { }
 

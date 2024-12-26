@@ -12,7 +12,11 @@ export class NewDashboardComponent {
   searchText?: string;
   constructor(private dialog: MatDialog) {}
   addNewStudent() {
-    const dialogRef = this.dialog.open(AddDialogComponent, {});
+    const dialogRef = this.dialog.open(AddDialogComponent, {
+      data:{
+        title:"reservation"
+      }
+    });
   }
 
   addNewReservation() {

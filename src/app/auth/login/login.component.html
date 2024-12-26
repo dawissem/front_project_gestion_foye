@@ -13,7 +13,7 @@
             </mat-card-header>
     
             <mat-card-content>
-                <form class="login-form">
+                <form [formGroup]="loginForm" class="login-form" (ngSubmit)="onSubmit()">
                     <mat-form-field class="example-full-width">
                         <mat-label>Email</mat-label>
                         <input type="email" matInput formControlName="email" placeholder="Ex. pat@example.com">
@@ -22,7 +22,7 @@
                     </mat-form-field>
                     <mat-form-field class="example-full-width">
                         <mat-label>Enter your password</mat-label>
-                        <input matInput [type]="password ? 'password' : 'text'" />
+                        <input matInput formControlName="password" [type]="password ? 'password' : 'text'" />
                         <button mat-icon-button matSuffix (click)="hide()" [attr.aria-label]="'Hide password'"
                             [attr.aria-pressed]="hide()">
                             <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
@@ -35,7 +35,7 @@
                         <!-- <button mat-button>LIKE</button>
                         <button mat-button>SHARE</button> -->
                         <button class="link__button" mat-button>Forgot Password</button>
-                        <button mat-raised-button class="login__button" (click)="navigateToHome($event)">Login</button>
+                        <button mat-raised-button class="login__button" type="submit">Login</button>
                         <div class="card__actions-footer">                            
                             <span>Don't have an account</span>
                             <a mat-button routerLink="/auth/signup">Create an account</a>
