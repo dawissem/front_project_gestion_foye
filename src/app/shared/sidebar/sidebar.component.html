@@ -3,29 +3,41 @@
     <mat-sidenav #snav fixedTopGap class="sidenav" mode="side" opened>
       <mat-nav-list>
   
-          <h3 mat-subheader class="subheader">
+          <!-- <h3 mat-subheader class="subheader">
             <mat-icon>home</mat-icon>
             Home
-          </h3>
-  
-        <a mat-list-item routerLink="/home/dashboard" routerLinkActive="active">
+          </h3> -->
+          <a mat-list-item routerLink="/home/dashboard/admin" routerLinkActive="active">
+            <div class="nav-item">
+              <mat-icon mat-list-icon>dashboard</mat-icon>
+              <p mat-line>Dashboard a</p>
+            </div>
+          </a>
+        <!-- <a mat-list-item routerLink="/home/dashboard" routerLinkActive="active">
           <div class="nav-item">
             <mat-icon mat-list-icon>dashboard</mat-icon>
             <p mat-line>Dashboard</p>
           </div>
-        </a>
+        </a> -->
 
-        <a mat-list-item routerLink="/customers" routerLinkActive="active">
+        <a mat-list-item routerLink="/home/universities" routerLinkActive="active">
           <div class="nav-item">
             <mat-icon mat-list-icon>business</mat-icon>
-            <p mat-line>Customers</p>
+            <p mat-line>Universities</p>
           </div>
         </a>
   
         <a mat-list-item routerLink="/home/users" routerLinkActive="active">
           <div class="nav-item"><!--pour faire l allignement-->
             <mat-icon mat-list-icon>people</mat-icon>
-            <p mat-line>Users</p>
+            <p mat-line>Etudiants</p>
+          </div>
+        </a> 
+
+        <a mat-list-item routerLink="/home/reservation" routerLinkActive="active">
+          <div class="nav-item"><!--pour faire l allignement-->
+            <mat-icon mat-list-icon>people</mat-icon>
+            <p mat-line>Reservations</p>
           </div>
         </a> 
   
@@ -42,7 +54,7 @@
             <p mat-line>Log out</p>
           </div>
         </a>
-        <h4>Basic mat-select</h4>
+        <!-- <h4>Basic mat-select</h4>
         <mat-form-field>
           <mat-label>Favorite food</mat-label>
           <mat-select>           
@@ -58,7 +70,7 @@
             <option value="mercedes">Mercedes</option>
             <option value="audi">Audi</option>
           </select>
-        </mat-form-field>
+        </mat-form-field> -->
       </mat-nav-list>
   
     </mat-sidenav>

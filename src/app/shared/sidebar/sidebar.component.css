@@ -121,7 +121,7 @@
     left: 0;
     right: 0;
     height: 100%;
-    background: linear-gradient(rgb(117, 236, 200), rgb(178, 83, 187), rgba(232, 121, 245, 0.895));
+    /* background: linear-gradient(rgb(117, 236, 200), rgb(178, 83, 187), rgba(232, 121, 245, 0.895)); */
     z-index: -1; /* Behind the text */
     border-radius: 4px;
   }

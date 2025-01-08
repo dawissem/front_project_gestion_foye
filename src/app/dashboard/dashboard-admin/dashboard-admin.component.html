@@ -8,10 +8,7 @@
   
     <mat-table #table [dataSource]="dataSource" matSort class="mat-cell">
 
-      <!--- Note that these columns can be defined in any order.
-            The actual rendered columns are set as a property on the row definition" -->
-  
-      <!-- ID Column -->
+
       <ng-container matColumnDef="id">
         <mat-header-cell *matHeaderCellDef mat-sort-header>Id</mat-header-cell>
         <mat-cell *matCellDef="let row" >{{row.id}}</mat-cell>
@@ -54,7 +51,7 @@
           <button mat-icon-button color="accent" (click)="startEdit(i, row.id, row.title, row.state, row.url, row.created_at, row.updated_at)">
             <mat-icon aria-label="Edit">edit</mat-icon>
           </button>
-  
+          
           <button mat-icon-button color="accent" (click)="deleteItem(i, row.id, row.title, row.state, row.url)">
             <mat-icon aria-label="Delete">delete</mat-icon>
           </button>

@@ -1,8 +1,8 @@
-import { Component, Inject, Input } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
-interface DialogParm {
+interface Student {
   id: number;
   title: string;
   state: string;
@@ -13,20 +13,17 @@ interface DialogParm {
   class:string;
   enrollmentDate:string;
   name:string;
-
 }
-
 @Component({
-  selector: 'app-add-dialog',
-  templateUrl: './add-dialog.component.html',
-  styleUrls: ['./add-dialog.component.css']
+  selector: 'app-reservation-dialog',
+  templateUrl: './reservation-dialog.component.html',
+  styleUrls: ['./reservation-dialog.component.css']
 })
-export class AddDialogComponent {
+export class ReservationDialogComponent {
 
 
-
-  constructor(public dialogRef: MatDialogRef<AddDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogParm,
+  constructor(public dialogRef: MatDialogRef<ReservationDialogComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: Student,
     // public dataService: DataService
   ) { }
 

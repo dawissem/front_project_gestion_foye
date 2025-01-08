@@ -15,13 +15,21 @@ import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { NewDashboardComponent } from './new-dashboard/new-dashboard.component';
+import { TransactionCardComponent } from './transaction-card/transaction-card.component';
+import { UniversitiesCardComponent } from './universities-card/universities-card.component';
+import { OverviewCardComponent } from './overview-card/overview-card.component';
+import { MatCardModule } from '@angular/material/card';
 
 
 @NgModule({
   declarations: [
-
     DashboardAdminComponent,
-    DashboardStudentComponent
+    DashboardStudentComponent,
+    NewDashboardComponent,
+    TransactionCardComponent,
+    UniversitiesCardComponent,
+    OverviewCardComponent
   ],
   imports: [
     CommonModule,    
@@ -35,12 +43,15 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
    MatToolbarModule,
    MatPaginatorModule,
    ReactiveFormsModule,
-   MatDialogModule
+   MatDialogModule,
+   MatCardModule
+  //  SlickCarouselModule
    
   ],
   exports: [
     DashboardStudentComponent,
-    DashboardAdminComponent
+    DashboardAdminComponent,
+    UniversitiesCardComponent
   ]
 })
 export class DashboardModule { }

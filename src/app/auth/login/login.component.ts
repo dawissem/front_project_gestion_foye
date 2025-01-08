@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { Router } from '@angular/router';
@@ -11,17 +12,43 @@ import { Router } from '@angular/router';
   standalone: false,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
+
+  constructor(private router:Router,private fb:FormBuilder){}
+  
   password :boolean =true; 
-  constructor(private router:Router){}
+  loginForm!: FormGroup;
+
+  ngOnInit(): void {
+    this.loginForm = this.fb.group({
+      email: ['', []],
+      password: ['', []],
+    });
+  }
+
+  onSubmit(): void {
+    if (this.loginForm.valid) {
+      const email = this.loginForm.value.email;
+      const password = this.loginForm.value.password;
+      console.log('Email:', email, 'Password:', password);
+      if (email.startsWith('admin')) {
+        this.router.navigate(['/home/dashboard/admin']);
+      }else {
+        this.router.navigate(['/home/dashboard/student']);
+      }
+      // this.login()
+    } else {
+      console.error('Form is invalid');
+    }
+  }
 hide() {
      this.password=!this.password;
     return !this.password;
 }
 
-navigateToHome(event: Event) {
-  event.preventDefault();
-  this.router.navigate(['/home']);
+login() {
+  // event.preventDefault();
+  this.router.navigate(['/home/dashboard/admin']);
 }
 
 clickEvent($event: MouseEvent) {
