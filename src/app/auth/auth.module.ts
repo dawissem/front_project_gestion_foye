@@ -14,7 +14,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatSelectModule } from '@angular/material/select';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -36,6 +36,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatSnackBarModule,
     MatSelectModule,
     ReactiveFormsModule,
+    FormsModule
   ],
   exports:[
     LoginComponent
