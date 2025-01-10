@@ -1,7 +1,7 @@
 <div class="container">
     <h3 mat-dialog-title class="dialog-title">Add New Student</h3>
   
-    <form class="mat-dialog-content form-container" (ngSubmit)="submit" #formControl="ngForm">
+    <form class="mat-dialog-content form-container" (ngSubmit)="submit()" #formControl="ngForm">
       <mat-form-field appearance="fill" class="form-field">
         <mat-label>Student ID</mat-label>
         <input matInput placeholder="Enter ID" [(ngModel)]="data.id" name="id" required>

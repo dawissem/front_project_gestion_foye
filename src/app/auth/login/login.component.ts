@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { Router } from '@angular/router';
+import { AuthServiceService } from 'src/app/services/auth-service.service';
 
 
 @Component({
@@ -14,7 +15,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private router:Router,private fb:FormBuilder){}
+  constructor(private router:Router,private fb:FormBuilder,private authService : AuthServiceService){}
   
   password :boolean =true; 
   loginForm!: FormGroup;
@@ -31,11 +32,19 @@ export class LoginComponent implements OnInit {
       const email = this.loginForm.value.email;
       const password = this.loginForm.value.password;
       console.log('Email:', email, 'Password:', password);
-      if (email.startsWith('admin')) {
-        this.router.navigate(['/home/dashboard/admin']);
-      }else {
-        this.router.navigate(['/home/dashboard/student']);
-      }
+      this.authService.login({email,password}).subscribe(
+        (data)=>{
+
+        },
+        (error)=>{
+
+        }
+      );
+      // if (email.startsWith('admin')) {
+      //   this.router.navigate(['/home/dashboard/admin']);
+      // }else {
+      //   this.router.navigate(['/home/dashboard/student']);
+      // }
       // this.login()
     } else {
       console.error('Form is invalid');
