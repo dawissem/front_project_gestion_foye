@@ -28,27 +28,30 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(): void {
-    if (this.loginForm.valid) {
-      const email = this.loginForm.value.email;
-      const password = this.loginForm.value.password;
-      console.log('Email:', email, 'Password:', password);
-      this.authService.login({email,password}).subscribe(
-        (data)=>{
+    const email = this.loginForm.value.email;
+    const password = this.loginForm.value.password;
+    // if (this.loginForm.valid) {
+    //   // const email = this.loginForm.value.email;
+      
+    //   console.log('Email:', email, 'Password:', password);
+    //   this.authService.login({email,password}).subscribe(
+    //     (data)=>{
 
-        },
-        (error)=>{
+    //     },
+    //     (error)=>{
 
-        }
-      );
-      // if (email.startsWith('admin')) {
-      //   this.router.navigate(['/home/dashboard/admin']);
-      // }else {
-      //   this.router.navigate(['/home/dashboard/student']);
-      // }
-      // this.login()
-    } else {
-      console.error('Form is invalid');
-    }
+    //     }
+    //   );
+
+    // } else {
+    //   console.error('Form is invalid');
+    // }
+
+      if (email.startsWith('admin')) {
+        this.router.navigate(['/home/dashboard/admin']);
+      }else {
+        this.router.navigate(['/home/dashboard/student']);
+      }
   }
 hide() {
      this.password=!this.password;
