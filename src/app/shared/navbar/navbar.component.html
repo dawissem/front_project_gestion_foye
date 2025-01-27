@@ -1,46 +1,35 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row class="navbar__style">
+    <!-- Left Section -->
     <div class="left__navbar">
-      <!-- <mat-icon mat-icon-button>
-        <i class="material-icons">menu</i>
-      </mat-icon> -->
-      &nbsp;
+      <mat-icon mat-icon-button>menu</mat-icon>
       <span>Gestion Foyer</span>
     </div>
-    <div class="right__navbar navbar">
-      <div class="navbar-search-container">
-        <div class="navbar-search-container">
-          <mat-icon matPrefix>search</mat-icon>
-          <input
-            style="border: none"
-            matInput
-            type="text"
-            placeholder="Search"
-          />
+
+    <!-- Center Section (Search) -->
+    <div class="navbar-search-container">
+      <mat-form-field class="search-field" appearance="outline">
+        <mat-icon matPrefix>search</mat-icon>
+        <input matInput type="text" placeholder="Search" />
+      </mat-form-field>
+    </div>
+
+    <!-- Right Section -->
+    <div class="right__navbar">
+      <button mat-icon-button class="notification-btn">
+        <mat-icon matBadge="3" matBadgeColor="warn">notifications</mat-icon>
+      </button>
+      <button mat-button [matMenuTriggerFor]="menu" class="profile-btn">
+        <div class="icon-circle">
+          <mat-icon>person</mat-icon>
         </div>
-      </div>
-      <div class="right__navbar">
-        <div class="demo-section">
-          <button mat-icon-button>
-            <mat-icon matBadge="2" matBadgeColor="accent"
-              >notifications</mat-icon
-            >
-          </button>
-        </div>
-        <div>
-          <button mat-button [matMenuTriggerFor]="menu" style="margin-top: 6px">
-            <div class="icon-circle">
-              <mat-icon>person</mat-icon>
-            </div>
-          </button>
-          <mat-menu #menu="matMenu">
-            <button mat-menu-item><mat-icon>person</mat-icon>Account</button>
-            <button mat-menu-item>
-              <mat-icon>exit_to_app</mat-icon>Logout
-            </button>
-          </mat-menu>
-        </div>
-      </div>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item><mat-icon>person</mat-icon>Account</button>
+        <button mat-menu-item>
+          <mat-icon>exit_to_app</mat-icon>Logout
+        </button>
+      </mat-menu>
     </div>
   </mat-toolbar-row>
 </mat-toolbar>

@@ -1,94 +1,127 @@
+/* Navbar Style */
+.navbar__style {
+  background: linear-gradient(90deg, #3f51b5, #5c6bc0);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 64px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
 
-.left__navbar{
+/* Left Section */
+.left__navbar {
   display: flex;
   align-items: center;
-}
-
-
-
-.right__navbar{
-display: flex; 
-align-items: center;
-}
-
-.navbar__style {
-
-background: white; 
-color: #110f0f; 
-display: flex;
-justify-content: space-between;
-box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.1);
-border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-
-
-}
-
-.left__navbar span {
-font-size: 1.5rem;
-font-weight: bold;
-color: black;
+  gap: 12px;
 }
 
 .left__navbar mat-icon {
-color: #f25ddce1; /* Icon color */
-
+  color: white;
+  cursor: pointer;
+  font-size: 28px;
 }
 
-.navbar-search-container{
-  border: none;
+.left__navbar span {
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #e3e3e3;
+}
+
+/* Search Section */
+.navbar-search-container {
   display: flex;
   align-items: center;
+  flex: 1; /* Stretch to occupy available space */
+  justify-content: center;
 }
 
+.search-field {
+  width: 400px;
+  max-width: 100%;
+}
+
+.search-field input {
+  color: white;
+}
+
+.search-field .mat-form-field-wrapper {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  color: white;
+}
+
+.search-field .mat-icon {
+  color: white;
+}
+
+/* Right Section */
 .right__navbar {
-display: flex;
-align-items: center;
-}
-
-.navbar {
   display: flex;
-  justify-content: space-between;
-  width: 80%;
+  align-items: center;
+  gap: 16px;
 }
 
-input[matInput]:focus {
-  outline: none; 
-  border: none;  
-  box-shadow: none; 
+.notification-btn mat-icon {
+  font-size: 28px;
+  color: white;
 }
 
-.right__navbar .demo-section button {
-/* color: #f25ddce1; */
-padding-left: 25px;
-padding-top: 20px;
+.notification-btn:hover mat-icon {
+  color: #f8b400; /* Add hover effect */
 }
 
-.right__navbar mat-icon {
-/* color: #f25ddce1; */
-}
-
-.right__navbar button[mat-button] {
-color: #e6e4e5;
-font-weight: 500;
-font-size: 1rem;
-}
-
-.align{
-display: flex;
-align-items: center;
+.profile-btn {
+  padding: 0;
 }
 
 .icon-circle {
-  width: 40px; /* Adjust size as needed */
-  height: 40px; /* Make it a perfect circle */
-  background-color: #78909c; /* Match the color you want */
-  border-radius: 50%; /* Makes it circular */
+  width: 40px;
+  height: 40px;
+  background-color: #5c6bc0;
+  border-radius: 50%;
   display: flex;
-  align-items: center; /* Centers the icon vertically */
-  justify-content: center; /* Centers the icon horizontally */
-  color: white; /* Icon color */
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.icon-circle mat-icon {
-  font-size: 24px; /* Adjust icon size */
+.icon-circle:hover {
+  background-color: #3f51b5; /* Slight hover effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-search-container {
+    display: none; /* Hide search on smaller screens */
+  }
+
+  .navbar__style {
+    padding: 0 10px;
+  }
+
+  .left__navbar span {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .right__navbar {
+    gap: 10px;
+  }
+
+  .icon-circle {
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+  }
+
+  .notification-btn mat-icon {
+    font-size: 24px;
+  }
 }
