@@ -1,59 +1,91 @@
-
- /* Flex layout adjustments */
- [fxLayout="row"] {
-    display: flex;
-    justify-content: center;
-  }
-  
-  /* Form field styling */
-  .full-width {
-    width: 100%;
-    margin-bottom: 16px;
-  }
-  
-  .mat-form-field {
-    background-color: #c76daf;
-    border-radius: 4px;
-  }
-  
-  .mat-form-field-appearance-fill .mat-form-field-flex {
-    padding: 0 12px;
-  }
-  
-  .mat-form-field-label {
-    color: #666;
-    font-weight: 500;
-  }
-  
-  /* Input field styling */
-  input.mat-input-element {
-    padding: 12px 0;
-    font-size: 1rem;
-  }
-  
-  input::placeholder {
-    color: #999;
-    opacity: 1;
-  }
-  
-  /* Icon button styling */
-  .mat-icon {
-    cursor: pointer;
-    color: #d412bb;
-    transition: color 0.3s;
-  }
-  
-  .mat-icon:hover {
-    color: #1c2b9a;
-  }
-
-  .pink-button {
-    color: white; /* Text color */
-    background-color: red;
-    &:hover {
-        background-color: #ac6fac; /* Darker pink on hover */
-    }
+/* General Form Container */
+.form-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 24px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
+
+/* Title Styling */
 .pink-text {
-    color: #d5006d; /* Change to your desired pink color */
+  color: #cc0ecc;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Flex Layout for Form */
+[fxLayout="row"] {
+  display: flex;
+  justify-content: center;
+}
+
+/* Full-width Material Form Fields */
+.full-width {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+/* Material Form Field Styling */
+.mat-form-field {
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  padding: 5px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.mat-form-field-label {
+  color: #555;
+  font-weight: 500;
+}
+
+/* Input Field Styling */
+input.mat-input-element {
+  padding: 12px 0;
+  font-size: 1rem;
+}
+
+/* Placeholder Color */
+input::placeholder {
+  color: #888;
+  opacity: 1;
+}
+
+/* Button Container */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* Save Button */
+.save-button {
+  background: #4CAF50;
+  color: white;
+}
+
+.save-button:hover {
+  background: #388E3C;
+}
+
+/* Change Password Button */
+.password-button {
+  background: #db1414;
+  color: white;
+}
+
+.password-button:hover {
+  background: #ae0eae;
 }

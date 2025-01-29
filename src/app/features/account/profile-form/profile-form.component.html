@@ -1,32 +1,29 @@
-<div>
-    <h3 class="pink-text">Use the form below to change your password.</h3>
+<div class="form-container">
+  <h3 class="pink-text">Update Your Information</h3>
 
-    <div fxLayout="row" fxLayoutAlign="center stretch">
+  <div fxLayout="row" fxLayoutAlign="center stretch">
+      <div fxFlex="60%">
+          
+          <!-- Name Field -->
+          <mat-form-field class="full-width">
+               <input matInput placeholder="Enter your name">
+          </mat-form-field>
 
-        <div fxFlex="60%">
+          <!-- Email Field -->
+          <mat-form-field class="full-width">
+               <input matInput type="email" placeholder="Enter your email">
+          </mat-form-field>
+ 
+          <!-- Address Field -->
+          <mat-form-field class="full-width">
+               <input matInput placeholder="Enter your address">
+          </mat-form-field>
 
-            <mat-form-field class="full-width">
-                <mat-label>Name</mat-label>
-                <input matInput >
-              </mat-form-field>
-
-              <mat-form-field class="full-width">
-                <mat-label>email</mat-label>
-                <input matInput >
-              </mat-form-field>
-
-              <mat-form-field class="full-width">
-                <mat-label>Address</mat-label>
-                <input matInput >
-              </mat-form-field>
-
-
-            <div style="display: flex; justify-content: space-between">
-                <button mat-raised-button class="pink-button" (click)="changePassword()">Save</button>
-                <button mat-raised-button class="pink-button" (click)="goToChangePassword($event)">change password</button>
-            </div>
-         
-
-        </div>
-    </div>
+          <!-- Buttons -->
+          <div class="button-group">
+              <button mat-raised-button class="save-button" (click)="changePassword()">Save</button>
+              <button mat-raised-button class="password-button" (click)="goToChangePassword($event)">Change Password</button>
+          </div>
+      </div>
+  </div>
 </div>

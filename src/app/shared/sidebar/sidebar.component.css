@@ -1,68 +1,74 @@
-/* Sidenav Container */
+/* Make sure container takes full height */
 .navbar-sidenav-container {
   display: flex;
-  height: 100vh;
+  height: 100vh; /* Full height */
 }
 
-/* Sidenav Styles */
+/* Sidebar Styles */
 .sidenav {
-  min-width: 250px;
+  width: 260px; /* Fixed width */
+  height: 100vh; /* Full height */
   background: linear-gradient(90deg, #3f51b5, #5c6bc0);
   color: white;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
-/* Mat-list-item Flexbox Fix */
+/* Flexbox for proper alignment */
 .sidenav a[mat-list-item] {
-  display: flex; /* Force flexbox for alignment */
-  flex-direction: row; /* Ensure icon and text are side-by-side */
-  align-items: center; /* Align vertically */
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
   color: white;
   text-decoration: none;
-  padding: 12px 16px; /* Adjust spacing */
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-/* Hover Effect for List Items */
+/* Hover effect */
 .sidenav a[mat-list-item]:hover {
-  background-color: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.2);
   transform: scale(1.02);
 }
 
-/* Active Item Styles */
+/* Active Item */
 a.mat-list-item.active {
-  background-color: rgba(255, 255, 255, 0.15);
-  border-left: 4px solid #ffffff;
-  padding-left: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  border-left: 4px solid white;
 }
-
-/* Icon Styles */
-.mat-icon {
-  margin-right: 12px; /* Adjust space between icon and text */
-  font-size: 24px;
-  color: white;
+.nav-item {
   display: flex;
-  align-items: center; /* Ensure icon stays centered */
+  align-items: center; /* Align text & icon */
+  gap: 10px; /* Space between icon & text */
+  width: 100%;
+}
+
+/* Ensure Icons are Centered */
+.mat-icon {
+  font-size: 24px; 
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
   justify-content: center;
-}
-
-/* Text Styling */
-p[mat-line] {
-  margin: 0; /* Remove unwanted margins */
-  font-size: 16px;
-  line-height: 1.5;
   color: white;
-  display: inline-block; /* Ensure proper inline alignment */
-  flex: 1; /* Allow text to take up remaining space */
 }
 
-/* Responsive Design */
+/* Fix Text Alignment */
+p[mat-line] {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  flex: 1; /* Ensure text takes full space */
+}
+
+/* Mobile Styles */
 @media (max-width: 768px) {
   .sidenav {
-    min-width: 100%;
+    width: 80%; /* Takes 80% width */
+    max-width: 300px;
     position: fixed;
-    z-index: 10;
+    z-index: 100;
     height: 100%;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
   }
