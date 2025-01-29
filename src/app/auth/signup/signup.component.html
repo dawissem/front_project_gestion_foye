@@ -67,18 +67,44 @@
             </button>
           </mat-form-field>
 
+
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Reenter your password</mat-label>
+            <input
+              matInput
+                name="password"
+              [type]="password ? 'password' : 'text'"
+              [(ngModel)]="user.passowrd"
+            />
+            <button
+              mat-icon-button
+              matSuffix
+              (click)="hide()"
+              [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide()"
+            >
+              <mat-icon>{{
+                hide() ? "visibility_off" : "visibility"
+              }}</mat-icon>
+            </button>
+          </mat-form-field>
+
+
+
           <section class="example-section">
             <mat-checkbox class="example-margin">Remember me</mat-checkbox>
           </section>
           <mat-card-actions class="card__actions">
          
-            <button class="link__button" mat-button>Forgot Password</button>
-            <button [disabled]="userForm.invalid" mat-raised-button class="login__button" type="submit">
+           
+            <!-- <button [disabled]="userForm.invalid" mat-raised-button class="login__button" type="submit">
               signup
-            </button>
+            </button> -->
             <div class="card__actions-footer">
-              <span>Don't have an account</span>
-              <a mat-button routerLink="/auth/signup">Create an account</a>
+              <button class="link__button" mat-button>Forgot Password</button>
+              <!-- <span>Don't have an account</span> -->
+              <a mat-button class="link__button" routerLink="/auth/signup" color="primarys" >Login</a>
             </div>
           </mat-card-actions>
         </form>

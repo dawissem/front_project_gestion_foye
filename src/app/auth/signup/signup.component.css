@@ -1,56 +1,141 @@
-.example-card {
-    max-width: 400px;
-    backdrop-filter: blur(14px);
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-  
-  
-  .space mat-icon {
-    margin-right: 10px;
-  }
-  .background {
-  
-    height: 100vh;
-  }
-  .card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-   
-  }
-  
-  .example-full-width {
-    width: 100%;
-  }
-  
-  .login__button {
-    width: 100%;
-  }
-  
-  .card__actions{
-    padding: 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-  
-  .card__actions-footer{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
-    
-  }
-  
-  
-  .card__actions-footer span {
-    font-family: 'times new roman';
-    font-size: 16px;
-    font-weight: 500;
-  
-  }
+/* General styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  .text-danger{
-    color: red;
-  }
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Background Styling */
+.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('https://www.tunisie.campusfrance.org/sites/pays/files/tunisie/r%C3%A9sidence%20universitaire%20du%20V%C3%A9lodrome.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Card styles */
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.example-card {
+  max-width: 400px;
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 8px 24px rgba(59, 47, 47, 0.2);
+  animation: borderAnimation 5s linear infinite;
+ }
+
+/* Toolbar (Header) */
+mat-toolbar {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+mat-toolbar mat-icon {
+  color: white;
+  margin-right: 8px;
+}
+
+/* Form Fields */
+.example-full-width {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+/* Button Styling */
+.login__button {
+  width: 100%;
+  background-color: #180b8602;
+  color: white;
+  border-radius: 8px;
+  padding-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  animation: borderAnimation 5s linear infinite, pulseBorder 2s ease-in-out infinite;
+}
+
+.login__button:hover {
+  background-color: #303f9f;
+}
+
+/* Remember Me & Forgot Password */
+.example-section {
+  margin-top: 10px;
+}
+
+.link__button {
+  width: 100%;
+  background-color: #180b8602;
+  color: rgb(1, 8, 155);
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  
+}
+
+.link__button:hover {
+  color: #360185;
+}
+
+/* Signup Link */
+.card__actions-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.card__actions-footer span {
+  font-family: 'Times New Roman';
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.card__actions-footer a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #122fb0;
+}
+
+.card__actions-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Animated Border */
+@keyframes borderAnimation {
+  25% { border-color: #80e1ff; box-shadow: 0 0 10px #80e1ff; }
+  25% { border-color: #1991a1; box-shadow: 0 0 10px #2680aa; }
+  50% { border-color: #3357ff; box-shadow: 0 0 10px #3357ff; }
+  75% { border-color: #4617d2; box-shadow: 0 0 10px #311492; }
+}
+
+/* Pulse Effect */
+@keyframes pulseBorder {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
