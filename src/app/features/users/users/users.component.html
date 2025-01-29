@@ -1,14 +1,14 @@
 <div class="container mat-elevation-z8">
   <div class="form">
     <mat-form-field floatPlaceholder="never" color="accent" appearance="outline">
-      <input matInput #filter placeholder="Search issues">
+      <input matInput #filter placeholder="🔍 Search issues" class="search-input">
     </mat-form-field>
   </div>
 
   <mat-table #table [dataSource]="dataSource" matSort class="custom-table">
     <!-- ID Column -->
     <ng-container matColumnDef="id">
-      <mat-header-cell *matHeaderCellDef mat-sort-header>Id</mat-header-cell>
+      <mat-header-cell *matHeaderCellDef mat-sort-header>ID</mat-header-cell>
       <mat-cell *matCellDef="let row">{{ row.id }}</mat-cell>
     </ng-container>
 
@@ -18,7 +18,7 @@
     </ng-container>
 
     <ng-container matColumnDef="state">
-      <mat-header-cell *matHeaderCellDef mat-sort-header>State</mat-header-cell>
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Status</mat-header-cell>
       <mat-cell *matCellDef="let row">{{ row.state }}</mat-cell>
     </ng-container>
 
@@ -40,15 +40,15 @@
     <!-- Actions -->
     <ng-container matColumnDef="actions">
       <mat-header-cell *matHeaderCellDef>
-        <button mat-icon-button color="primary" (click)="addNew()">
+        <button mat-icon-button class="add-btn" (click)="addNew()">
           <mat-icon aria-label="Add">add</mat-icon>
         </button>
       </mat-header-cell>
       <mat-cell *matCellDef="let row; let i = index;">
-        <button mat-icon-button color="accent" (click)="startEdit(i, row.id, row.title, row.state, row.url, row.created_at, row.updated_at)">
+        <button mat-icon-button class="edit-btn" (click)="startEdit(i, row.id, row.title, row.state, row.url, row.created_at, row.updated_at)">
           <mat-icon aria-label="Edit">edit</mat-icon>
         </button>
-        <button mat-icon-button color="warn" (click)="deleteItem(i, row.id, row.title, row.state, row.url)">
+        <button mat-icon-button class="delete-btn" (click)="deleteItem(i, row.id, row.title, row.state, row.url)">
           <mat-icon aria-label="Delete">delete</mat-icon>
         </button>
       </mat-cell>
@@ -58,10 +58,18 @@
     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
   </mat-table>
 
-  <div class="no-results" [style.display]="0 === 0 ? '' : 'none'">
+  <div class="no-results" *ngIf="dataSource.length === 0">
     No results found.
   </div>
 
-  <mat-paginator #paginator [length]="4" [pageIndex]="0" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
-  </mat-paginator>
+  <mat-paginator #paginator [length]="4" [pageIndex]="0" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
 </div>
+
+ 
+ 
+
+    <!-- Actions -->
+    
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+ 

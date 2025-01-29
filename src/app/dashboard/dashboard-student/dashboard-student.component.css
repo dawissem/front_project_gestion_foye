@@ -138,11 +138,14 @@
   .add__reservation__card{
     width: 28%;
     height: 40vh;
-    color: black;
-    background-color: white;
+    background: rgb(25, 85, 215);
+    background: linear-gradient(
+      0deg,
+      rgba(25, 85, 215, 1) 0%,
+      rgba(31, 159, 240, 1) 100%
+    );
     border-radius: 12px;
     padding: 18px 24px 0px 24px;
-  
   }
   
   .add__reservation__card-style{
@@ -172,7 +175,7 @@
   }
   
   .add__reservation__card-subtitle {
-    color: #586589;
+    color: #ffffff;
   }
 
   /* Styles for the request status card */
@@ -182,8 +185,15 @@
   }
 
 .request-status-card {
-    padding: 20px;
-  
+
+    background: rgb(25, 85, 215);
+    background: linear-gradient(
+      0deg,
+      rgba(25, 85, 215, 1) 0%,
+      rgba(31, 159, 240, 1) 100%
+    );
+    border-radius: 12px;
+    padding: 18px 24px 12px 24px;
     
   }
   
@@ -221,7 +231,7 @@
   
   /* Status styles */
   .status-pending {
-    color: orange;
+    color: blue;
   }
   
   .status-in-progress {
