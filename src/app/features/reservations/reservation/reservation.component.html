@@ -5,7 +5,7 @@
       <p>You currently have <strong>{{ pendingRequestsCount }} request(s)</strong></p>
   </div>
 
-  <!-- Actions -->
+  <!-- Search & Actions -->
   <div class="actions">
       <input type="text" placeholder="Search Reservations..." class="search-input">
       <select class="filter-dropdown">
@@ -24,19 +24,26 @@
       </button>
   </div>
 
-  <!-- Reservations List -->
+  <!-- Reservations List (Fixing *ngFor & Display Issues) -->
   <div class="reservations-list">
-      <div *ngFor="let reservation of filteredReservations" class="reservation-item">
-          <div class="icon">📅</div>
-          <div class="content">
-              <p><strong>{{ reservation.title }}</strong> - {{ reservation.message }}</p>
-              <span>{{ reservation.time }}</span>
+      <ng-container *ngIf="filteredReservations.length > 0; else noReservations">
+          <div *ngFor="let reservation of filteredReservations" class="reservation-item">
+              <div class="icon">📅</div>
+              <div class="content">
+                  <p><strong>{{ reservation.title }}</strong> - {{ reservation.message }}</p>
+                  <span>{{ reservation.time }}</span>
+              </div>
+              <div *ngIf="reservation.hasActions" class="actions">
+                  <button class="btn delete-btn">🗑 Delete</button>
+                  <button class="btn decline-btn">🚫 Decline</button>
+                  <button class="btn accept-btn">✅ Accept</button>
+              </div>
           </div>
-          <div *ngIf="reservation.hasActions" class="actions">
-              <button class="btn delete-btn">🗑 Delete</button>
-              <button class="btn decline-btn">🚫 Decline</button>
-              <button class="btn accept-btn">✅ Accept</button>
-          </div>
-      </div>
+      </ng-container>
+
+      <!-- No Reservations Found -->
+      <ng-template #noReservations>
+          <p class="no-reservations">No reservations found.</p>
+      </ng-template>
   </div>
 </div>
